@@ -107,6 +107,7 @@ public class LayoutGradedHW implements ActionListener {
       //  mainFrame.add(Button4, BorderLayout.WEST);
 
         JScrollPane scrollPane = new JScrollPane(ta); // found this on youtube looking for ways to do scroll
+        // scrolls side to side when you add a lot of text
         mainFrame.add(scrollPane, BorderLayout.CENTER);
        // mainFrame.add(Uppercase);
 
@@ -135,8 +136,8 @@ public class LayoutGradedHW implements ActionListener {
             } else if (command.equals("Reset")) {
                 inputArea.setText("");
                 ta.setText("");
-          //  } else if (command.equals("Uppercase"));
-         //       ta.append(inputArea.setText("Uppercase");
+            } else if (command.equals("Uppercase")) {
+                ta.setText(inputArea.getText().toUpperCase());
             } else {
                 statusLabel.setText("Cancel Button clicked.");
             }
