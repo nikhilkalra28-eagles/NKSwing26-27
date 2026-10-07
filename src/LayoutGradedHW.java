@@ -79,7 +79,7 @@ public class LayoutGradedHW implements ActionListener {
 
         JButton Button1 = new JButton("Submit");
         JButton Button2 = new JButton("Reset");
-      //  JButton Button3 = new JButton("Button 3");
+        JButton Uppercase = new JButton("Uppercase");
       //  JButton Button4 = new JButton("Button 4");
         JButton Button5 = new JButton("Button 5");
 
@@ -87,14 +87,16 @@ public class LayoutGradedHW implements ActionListener {
         controlPanel.add(inputArea);
         controlPanel.add(Button1);
         controlPanel.add(Button2);
+        controlPanel.add(Uppercase);
 
         Button1.setActionCommand("Submit");
         Button2.setActionCommand("Reset");
+        Uppercase.setActionCommand("Uppercase");
       //  Button3.setActionCommand("Button 3");
 
         Button1.addActionListener(new ButtonClickListener());
         Button2.addActionListener(new ButtonClickListener());
-      //  Button3.addActionListener(new ButtonClickListener());
+        Uppercase.addActionListener(new ButtonClickListener());
        // Button4.addActionListener(new ButtonClickListener());
         Button5.addActionListener(new ButtonClickListener());
 
@@ -104,8 +106,9 @@ public class LayoutGradedHW implements ActionListener {
       //  mainFrame.add(Button3, BorderLayout.SOUTH);
       //  mainFrame.add(Button4, BorderLayout.WEST);
 
-        JScrollPane scrollPane = new JScrollPane(ta);
+        JScrollPane scrollPane = new JScrollPane(ta); // found this on youtube looking for ways to do scroll
         mainFrame.add(scrollPane, BorderLayout.CENTER);
+       // mainFrame.add(Uppercase);
 
         mainFrame.setVisible(true);
 
@@ -132,11 +135,16 @@ public class LayoutGradedHW implements ActionListener {
             } else if (command.equals("Reset")) {
                 inputArea.setText("");
                 ta.setText("");
+          //  } else if (command.equals("Uppercase"));
+         //       ta.append(inputArea.setText("Uppercase");
             } else {
                 statusLabel.setText("Cancel Button clicked.");
             }
+
+
+            }
         }
     }
-}
+
 
 
